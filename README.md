@@ -1,3 +1,8 @@
+My portfolio, version 2.0
+Check it @ 
+
+________________________________________________________________________________________________________
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
