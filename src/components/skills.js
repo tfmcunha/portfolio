@@ -22,7 +22,7 @@ class Skills extends Component {
 
 	render() {
 		return(
-			<div>
+			<div className="box">
 				<h3>SKILLS</h3>
 				{
 					this.state.skills.map((skill, index) => 

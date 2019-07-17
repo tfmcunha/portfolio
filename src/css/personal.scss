@@ -1,0 +1,23 @@
+@import 'variables';
+
+#personal {
+	padding: 140px 20px 20px 20px;
+	background-color: $primaryColor;	
+	box-shadow: 5px 0 10px 1px $shadowColor, -5px 0 10px 1px $shadowColor;
+	* {
+		color: white;
+	}
+	a {		
+		font-size: 26px;
+		transition: all 500ms;
+		&:hover {
+			transform: scale(2);			
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	#personal {
+		height: 100vh;
+	}
+}
