@@ -17,7 +17,7 @@ function Main() {
       	</div>
       	<div className="col-md-9">
       		<div className="row subcontainer pb-4">
-      			<div className="col-md-6 ">
+      			<div className="col-md-6 order-2 order-md-1">
       				<div className="row mt-3">
                 <div className="col">
                   <Education />
@@ -29,7 +29,7 @@ function Main() {
                 </div>
               </div>
       			</div>
-      			<div className="col-md-6 mt-3">
+      			<div className="col-md-6 mt-3 order-1 order-md-2">
       				<Skills />
       			</div>
       		</div>
