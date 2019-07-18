@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import ProgressBar from './ProgressBar/progressbar';
+import ProgressBar from './progressbar';
 
 class Skills extends Component {
 	constructor() {
@@ -10,7 +10,7 @@ class Skills extends Component {
 	} 
 
 	componentDidMount() {
-    	fetch('../skills.json')
+    	fetch('../../skills.json')
     	.then(response => response.json())
     	.then(myjson => {
       		this.setState({
