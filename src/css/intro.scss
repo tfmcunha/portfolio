@@ -1,9 +1,10 @@
 @import 'variables';
 
-#personal {
+#intro {
 	padding: 140px 20px 20px 20px;
 	background-color: $primaryColor;	
 	box-shadow: 5px 0 10px 1px $shadowColor, -5px 0 10px 1px $shadowColor;
+	transition: all 1s;
 	* {
 		color: white;
 	}
@@ -17,7 +18,14 @@
 }
 
 @media (min-width: 768px) {
-	#personal {
+	#intro {
 		height: 100vh;
 	}
+}
+
+.hide {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	height: 0 !important;
+	overflow: hidden !important;
 }

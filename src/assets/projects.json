@@ -1,0 +1,39 @@
+[
+  {
+    "id": "1",
+    "title": "Chalets&Caviar",
+    "tags": "wordpress",  
+    "description": "An Openclassrooms course project for a real estate company",
+    "plink": "http://dev-chaletsandcav.pantheonsite.io/"
+  },{
+    "id": "2",	
+    "title": "Film Festival",
+    "tags": "html, css, bootstrap",  
+    "description": "OC course project",
+    "plink": "https://vast-cove-16430.herokuapp.com/index.html"
+  },{
+    "id": "3",
+    "title": "Portfolio",
+    "tags": "react",  
+    "description": "An Openclassrooms course project",
+    "plink": ""
+  },{
+    "id": "4",
+    "title": "Move&Groove",
+    "tags": "ruby on rails",  
+    "description": "An Openclassrooms course project. A fitness activity tracking app deployed to Heroku",
+    "plink": "https://move-n-groove.herokuapp.com/"
+  },{
+    "id": "5",
+    "title": "Boulder Bike Tour",
+    "tags": "ruby on rails, react",  
+    "description": "An Openclassrooms course project featuring a bike race with react.js front-end and rails API back-end, both deployed to Heroku",
+    "plink": "https://oc-boulderbiketour.herokuapp.com/"
+  },{
+    "id": "6",
+    "title": "Friendly Neighbour",
+    "tags": "ruby on rails, react, action-cable",  
+    "description": "The last Openclassrooms course project. An app where users can register, add help requests on a map and chat between each other.",
+    "plink": "https://friendlyneighbour.herokuapp.com/"
+  }
+]

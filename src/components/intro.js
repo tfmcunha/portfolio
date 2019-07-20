@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { FaEnvelope, FaGithub, FaLinkedin, FaFreeCodeCamp, FaMapMarkerAlt } from 'react-icons/fa';
-import '../css/personal.scss';
+import '../css/intro.scss';
 
 
-class Personal extends Component {
+class Intro extends Component {
 	// componentDidMount(){
 	// 	setTimeout(() => document.getElementById('personal').classList.add('stretch'), 1000)
 		
@@ -11,7 +11,7 @@ class Personal extends Component {
 
 	render(){
 	  return (
-	    <div id="personal" className="toStretch">
+	    <div id="intro" className={this.props.page === 2 ? "hide" : ""}>
 	    	<p className="text-center">Welcome!</p> 
 	    	<p className="text-center"><i>"Do what you love, and you’ll never work another day in your life."</i></p>
 	    	<p className="text-justify"> That is what I feel while in front of a computer writing code.<br />
@@ -28,4 +28,4 @@ class Personal extends Component {
 	}  
 }
 
-export default Personal;
+export default Intro;

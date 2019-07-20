@@ -28,6 +28,15 @@ header {
 	}
 }
 
+.subcontainer {
+	opacity: 0;
+	transition: all 1s;
+	h3 {
+		font-family: $titleFont;
+		color: #B54A5D;
+	}	
+}
+
 
 
 .box {
@@ -37,12 +46,21 @@ header {
 	border-radius: 10px;
 	box-shadow: 5px 5px 15px 1px $shadowColor;
 	text-align: center;
-	h3 {
-		font-family: $titleFont;
-		color: #B54A5D;
-	}
-
 	a {
 		color: $primaryColor
 	}
 }	
+
+.hide {
+	
+	height: 0 !important;
+	overflow: hidden !important;
+}
+
+.fadeIn {
+	opacity: 1;
+}
+
+.projects {
+	padding-top: 130px;
+}

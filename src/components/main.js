@@ -1,41 +1,59 @@
-import React from 'react';
-import Personal from '../components/personal';
-import Skills from '../components/skills';
-import Education from '../components/education';
+import React, { Component } from 'react';
+import Intro from '../components/intro';
+import Bio from './bio';
 import Projects from '../components/projects';
+
 import '../css/main.scss';
 
-function Main() {
-  return (
-    <main className="row">    
-    	<header>
-    		<div>TIAGO CUNHA</div>
-    		<span>Web Developer</span>
-    	</header>	
-    	<div className="col-md-3">
-      		<Personal />
-      	</div>
-      	<div className="col-md-9">
-      		<div className="row subcontainer pb-4">
-      			<div className="col-md-6 order-2 order-md-1">
-      				<div className="row mt-3">
-                <div className="col">
-                  <Education />
-                </div>
-              </div>
-      				<div className="row mt-3">
-                <div className="col">
-                  <Projects />
-                </div>
-              </div>
-      			</div>
-      			<div className="col-md-6 mt-3 order-1 order-md-2">
-      				<Skills />
-      			</div>
-      		</div>
-      	</div>
-    </main>
-  );
+class Main extends Component {
+	constructor(){
+		super();
+		this.state = {
+			page: 1
+		}
+	}
+
+	componentDidMount(){
+		document.addEventListener('mousewheel', this.setPage)
+	}
+
+	setPage = (evt) => {
+		if (evt.deltaY < 0) {
+			this.state.page !== 1 && this.setState({page: 1})
+		} else {
+			this.state.page !== 2 && this.setState({page: 2})			
+		}
+	}
+
+	changePage(page) {
+		switch(page) {
+			case 1:
+				return <Bio />;				
+			case 2:
+				return <Projects />
+			default: 
+				return <Bio />;
+		}
+	}
+
+	render(){
+		return (
+			<main className="row">    
+				<header>
+					<div>TIAGO CUNHA</div>
+					<span>Web Developer</span>
+				</header>	
+
+				<div className="col-md-3">
+					<Intro page={this.state.page}/>
+				</div>
+
+				<div className={this.state.page === 1 ? "col-md-9" : "col-md-12"}>
+					{this.changePage(this.state.page)}				
+				</div>
+			</main>
+		);
+	}
 }
 
 export default Main;
