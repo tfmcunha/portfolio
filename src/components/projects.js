@@ -18,11 +18,12 @@ export default class Projects extends Component {
 		},1000)
 		this.setState({
 			projects: ProjectsData,
-			p: ProjectsData[0]
+			p: ProjectsData[5]
 		})
 	}
 	
-	render() {		
+	render() {	
+		console.log(this.state.projects)
 		return(
 			<div className={`subcontainer projects ${this.state.mounted ? "fadeIn" : ""}`}>
 				<div className="row">

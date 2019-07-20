@@ -35,6 +35,17 @@ header {
 		font-family: $titleFont;
 		color: #B54A5D;
 	}	
+	.tags {
+		div {
+			margin: 0 5px;
+			padding: 0 5px;
+			border-radius: 20px;
+			background-color: $primaryColor;
+			font-size: 12px;
+			color: white;	
+		}
+		
+	}
 }
 
 
@@ -64,3 +75,4 @@ header {
 .projects {
 	padding-top: 130px;
 }
+
