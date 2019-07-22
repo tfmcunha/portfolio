@@ -1,17 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { FaEnvelope, FaGithub, FaLinkedin, FaFreeCodeCamp, FaMapMarkerAlt } from 'react-icons/fa';
 import '../css/intro.scss';
 
 
-class Intro extends Component {
-	// componentDidMount(){
-	// 	setTimeout(() => document.getElementById('personal').classList.add('stretch'), 1000)
-		
-	// }
-
-	render(){
-	  return (
-	    <div id="intro" className={this.props.page === 2 ? "hide" : ""}>
+export default function Intro({page}){
+	return (
+	    <div id="intro" className={page === 2 ? "hide" : ""}>
 	    	<p className="text-center">Welcome!</p> 
 	    	<p className="text-center"><i>"Do what you love, and you’ll never work another day in your life."</i></p>
 	    	<p className="text-justify"> That is what I feel while in front of a computer writing code.<br />
@@ -24,8 +18,5 @@ class Intro extends Component {
 		        <a href="https://www.freecodecamp.org/tfmcunha" target="_blank" rel="noopener noreferrer"><FaFreeCodeCamp /></a>
 	      	</div>
 	    </div>
-	  );
-	}  
+	);	  
 }
-
-export default Intro;

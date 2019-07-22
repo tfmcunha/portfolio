@@ -1,31 +1,22 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/progressbar.css';
 
-class ProgressBar extends React.Component {
-  constructor() {
-    super();
-    this.state = {value: ""}
-  }
+export default function ProgressBar({label, value}) {
+  const [ val, setValue ] = useState(0)
 
-  componentDidMount(){
+  useEffect(() => {
     setTimeout(() => {
-      this.setState({
-        value: this.props.value
-      })
-    },1000)
-    
-  }
-  render(){
-    return(
-      <div style={{padding: "5px"}}>
-        <div className="progressBar">
-          <div className="progressBarFill" style={{width: `${this.state.value}%`}}>
-            <div className="label">{this.props.label}</div>
-          </div>
+      setValue(value)
+    },1500)    
+  }, [])
+
+  return(
+    <div style={{padding: "5px"}}>
+      <div className="progressBar">
+        <div className="progressBarFill" style={{width: `${val}%`}}>
+          <div className="label">{label}</div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );  
 }
-
-export default ProgressBar;

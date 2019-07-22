@@ -1,45 +1,34 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import ProjectsData from '../assets/projects.json';
 import ProjectDetails from '../components/projectDetails';
 
-export default class Projects extends Component {
-	constructor(){
-		super();
-		this.state= {
-			mounted: false,
-			projects: [], 
-			p: {}
-		}
-	}
-
-	componentDidMount(){
+export default function Projects() {
+	const [mounted, setMounted ] = useState(false)
+	const [projects, setProjects ] = useState([])
+	const [currentProject, setCurrentProject ] = useState({})
+			
+	useEffect(() => {
 		setTimeout(() => {
-			this.setState({mounted: true})
+			setMounted(true)
 		},1000)
-		this.setState({
-			projects: ProjectsData,
-			p: ProjectsData[5]
-		})
-	}
+		setProjects(ProjectsData)
+		setCurrentProject(ProjectsData[5])		
+	}, [currentProject])	
 	
-	render() {	
-		console.log(this.state.projects)
-		return(
-			<div className={`subcontainer projects ${this.state.mounted ? "fadeIn" : ""}`}>
-				<div className="row">
-					<h3>PROJECTS</h3>
-				</div>
-				<div className="row">
-					<div className="col-2"></div>
-					<div className="col-8 border">
-					{this.state.p.id &&
-						<ProjectDetails project={this.state.p}/>
-					}
-					</div>
-					<div className="col-2"></div>
-				</div>
+	return(
+		<div className={`subcontainer projects ${mounted ? "fadeIn" : ""}`}>
+			<div className="row">
+				<h3>PROJECTS</h3>
 			</div>
-		);
-	}
+			<div className="row">
+				<div className="col-2"></div>
+				<div className="col-8 border">
+				{currentProject.id &&
+					<ProjectDetails project={currentProject}/>
+				}
+				</div>
+				<div className="col-2"></div>
+			</div>
+		</div>
+	);	
 }
-

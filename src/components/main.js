@@ -1,31 +1,26 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import Intro from '../components/intro';
 import Bio from './bio';
 import Projects from '../components/projects';
 
 import '../css/main.scss';
 
-class Main extends Component {
-	constructor(){
-		super();
-		this.state = {
-			page: 1
-		}
-	}
+export default function Main() {
+	const [ page, setPage ] = useState(1);	
 
-	componentDidMount(){
-		document.addEventListener('mousewheel', this.setPage)
-	}
+	useEffect(()=>{
+		document.addEventListener('mousewheel', currentPage)
+	}, [page])	
 
-	setPage = (evt) => {
+	function currentPage(evt){
 		if (evt.deltaY < 0) {
-			this.state.page !== 1 && this.setState({page: 1})
+			page !== 1 && setPage(1)
 		} else {
-			this.state.page !== 2 && this.setState({page: 2})			
+			page !== 2 && setPage(2)			
 		}
 	}
 
-	changePage(page) {
+	function changePage(page) {
 		switch(page) {
 			case 1:
 				return <Bio />;				
@@ -35,25 +30,21 @@ class Main extends Component {
 				return <Bio />;
 		}
 	}
+	
+	return (
+		<main className="row">    
+			<header>
+				<div>TIAGO CUNHA</div>
+				<span>Web Developer</span>
+			</header>	
 
-	render(){
-		return (
-			<main className="row">    
-				<header>
-					<div>TIAGO CUNHA</div>
-					<span>Web Developer</span>
-				</header>	
+			<div className="col-md-3">
+				<Intro page={page}/>
+			</div>
 
-				<div className="col-md-3">
-					<Intro page={this.state.page}/>
-				</div>
-
-				<div className={this.state.page === 1 ? "col-md-9" : "col-md-12"}>
-					{this.changePage(this.state.page)}				
-				</div>
-			</main>
-		);
-	}
+			<div className={page === 1 ? "col-md-9" : "col-md-12"}>
+				{changePage(page)}				
+			</div>
+		</main>
+	);	
 }
-
-export default Main;
