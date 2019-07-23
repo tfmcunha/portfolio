@@ -1,8 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+
 @font-face {
   font-family: AreYouOkay;
    src: url('../assets/AreYouOkay.ttf');
 }
 
 $primaryColor: #4ab5a2;
+$secondaryColor: #B54A5D;
 $shadowColor: grey;
 $titleFont: AreYouOkay, "Courier New";
+$mainFont: 'Titillium Web';

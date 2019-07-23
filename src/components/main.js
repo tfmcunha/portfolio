@@ -6,19 +6,18 @@ import Projects from '../components/projects';
 import '../css/main.scss';
 
 export default function Main() {
-	const [ page, setPage ] = useState(1);	
+	const [ page, setPage ] = useState(1);		
 
 	useEffect(()=>{
-		document.addEventListener('mousewheel', currentPage)
-	}, [page])	
-
-	function currentPage(evt){
-		if (evt.deltaY < 0) {
-			page !== 1 && setPage(1)
-		} else {
-			page !== 2 && setPage(2)			
+		function currentPage(evt){
+			if (evt.deltaY < 0) {
+				page !== 1 && setPage(1)
+			} else {
+				page !== 2 && setPage(2)			
+			}
 		}
-	}
+		document.addEventListener('mousewheel', currentPage)
+	}, [page])		
 
 	function changePage(page) {
 		switch(page) {
@@ -34,7 +33,7 @@ export default function Main() {
 	return (
 		<main className="row">    
 			<header>
-				<div>TIAGO CUNHA</div>
+				<div id="title">TIAGO CUNHA</div>
 				<span>Web Developer</span>
 			</header>	
 

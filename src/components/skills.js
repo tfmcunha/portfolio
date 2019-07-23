@@ -18,6 +18,7 @@ export default function Skills() {
 						key={index} 
 						value={skill.value}
 						label={skill.name}
+						timer={(index+1)*200}
 					/>
 				)
 			}

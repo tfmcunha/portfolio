@@ -19,10 +19,11 @@ export default function ProjectDetails({project}) {
 				</div>
 			</div>
 			<div className="row">
-				<div className="col-12">
-					<a href={project.plink} target="_blank">
-						<img className="img-fluid" src={require(`../assets/images/project${project.id}.png`)}/>
-					</a>
+				<div className="col-12"> 
+						<a href={project.plink} target="_blank" rel="noopener noreferrer">
+							<img className="img-fluid" src={require(`../assets/images/project${project.id}.png`)} alt="project"/>
+						</a>
+					
 				</div>
 			</div>
 		</Fragment>

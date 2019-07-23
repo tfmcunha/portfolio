@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import '../css/progressbar.css';
 
-export default function ProgressBar({label, value}) {
+export default function ProgressBar({label, value, timer}) {
   const [ val, setValue ] = useState(0)
 
   useEffect(() => {
     setTimeout(() => {
       setValue(value)
-    },1500)    
-  }, [])
+    },(1000+timer))    
+  }, [value, timer])
 
   return(
     <div style={{padding: "5px"}}>
