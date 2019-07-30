@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ProjectsData from '../assets/projects.json';
 import ProjectDetails from '../components/projectDetails';
+//import { FaChevronLeft, FaChevronRight} from 'react-icons/fa';
 
 export default function Projects() {
 	const [mounted, setMounted ] = useState(false)
@@ -43,22 +44,22 @@ export default function Projects() {
 	}
 	
 	return(
-		<div className={`subcontainer projects ${mounted ? "fadeIn" : ""}`}>
-			{/*<div className="row">
-				<div className="col"><h3 className="text-center">PROJECTS</h3></div>
-			</div>*/}
+		<div className={`subcontainer projects ${mounted ? "fadeIn" : ""}`}>			
 			<div className="row">
-				<div className="col-1 col-md-2 d-flex justify-content-center align-items-center">
-					<div className="arrows" onClick={() => backward()}>«</div>
+				<div className="col-1 col-md-2"> 
+					<div className="d-flex justify-content-center">
+						<div className="arrows" onClick={() => backward()}>«</div>
+					</div>
 				</div>
 				<div className="col-10 col-md-8">
 					{currentProject.id &&
 						<ProjectDetails project={currentProject}/>
-					}
-					
+					}					
 				</div>
-				<div className="col-1 col-md-2 d-flex justify-content-center align-items-center">
-					<div className="arrows" onClick={() => forward()}>»</div>
+				<div className="col-1 col-md-2"> 
+					<div className="d-flex justify-content-center">
+						<div className="arrows" onClick={() => forward()}>»</div>										
+					</div>
 				</div>
 			</div>
 		</div>

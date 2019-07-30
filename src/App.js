@@ -4,8 +4,8 @@ import './App.css';
 
 function App() {
   return (
-    <div className="container-fluid">
-      <Main />
+    <div className="container-fluid">    	
+     	<Main />
     </div>
   );
 }

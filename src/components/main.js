@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Intro from '../components/intro';
 import Bio from './bio';
 import Projects from '../components/projects';
-
+import ErrorBoundary from '../components/errorboundary';
 import '../css/main.scss';
 
 export default function Main() {
@@ -42,7 +42,9 @@ export default function Main() {
 			</div>
 
 			<div className={page === 1 ? "col-md-9" : "col-md-12"}>
-				{changePage(page)}				
+				<ErrorBoundary>
+					{changePage(page)}				
+				</ErrorBoundary>
 			</div>
 		</main>
 	);	

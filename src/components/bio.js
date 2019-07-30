@@ -21,10 +21,18 @@ export default function Bio() {
 				</div>
 
 				<div className="row mt-3">
-					<div className="col">
+					<div className="col-12">
 						<div className="box">
-							<h3>PROJECTS</h3>
-							<div>SCROLL DOWN </div>
+							<h3>PROJECTS</h3>							
+						</div>
+					</div>
+					<div className="col-12 d-flex justify-content-center">
+						<div className="slider" data-toggle="tooltip" data-placement="top" title="Scroll down!">
+							<span className="chevron"></span>
+							<span className="chevron"></span>
+							<span className="chevron"></span>
+							<span className="chevron"></span>
+							<span className="chevron"></span>
 						</div>
 					</div>
 				</div>

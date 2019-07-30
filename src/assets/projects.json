@@ -3,37 +3,54 @@
     "id": "1",
     "title": "Chalets&Caviar",
     "tags": ["wordpress"],  
-    "description": "An Openclassrooms course project for a real estate company",
+    "date": "14/11/2018",
+    "company": "OpenClassrooms (course project)",
+    "platform": "Pantheon",
     "plink": "http://dev-chaletsandcav.pantheonsite.io/"
   },{
     "id": "2",	
     "title": "Film Festival",
     "tags": ["html", "css", "bootstrap"],  
-    "description": "OC course project",
+    "date": "10/12/2018",    
+    "company": "OpenClassrooms (course project)",
+    "repo": "filmfestival",
+    "platform": "Heroku",
     "plink": "https://vast-cove-16430.herokuapp.com/index.html"
   },{
     "id": "3",
     "title": "Portfolio",
-    "tags": ["react"],  
-    "description": "An Openclassrooms course project",
+    "tags": ["react.js"],
+    "date": "14/01/2019",  
+    "company": "OpenClassrooms (course project)",
+    "repo": "portfolio_old",
+    "platform": "GitHub Pages",
     "plink": ""
   },{
     "id": "4",
     "title": "Move&Groove",
     "tags": ["ruby on rails"],  
-    "description": "An Openclassrooms course project. A fitness activity tracking app deployed to Heroku",
+    "date": "20/03/2019",
+    "company": "OpenClassrooms (course project)",
+    "repo": "movegroove",
+    "platform": "Heroku",
     "plink": "https://move-n-groove.herokuapp.com/"
   },{
     "id": "5",
     "title": "Boulder Bike Tour",
-    "tags": ["ruby on rails", "react"],  
-    "description": "An Openclassrooms course project featuring a bike race with react.js front-end and rails API back-end, both deployed to Heroku",
+    "tags": ["ruby on rails", "react.js"],  
+    "date": "21/04/2019",
+    "company": "OpenClassrooms (course project)",
+    "repo": "bikerace",
+    "platform": "Heroku",
     "plink": "https://oc-boulderbiketour.herokuapp.com/"
   },{
     "id": "6",
     "title": "Friendly Neighbour",
-    "tags": ["ruby on rails", "react", "action-cable"],  
-    "description": "The last Openclassrooms course project. An app where users can register, add help requests on a map and chat between each other.",
+    "tags": ["ruby on rails", "react.js", "action-cable"],  
+    "date": "03/07/2019",
+    "company": "OpenClassrooms (course project)",
+    "repo": "FriendlyNeighbor",
+    "platform": "Heroku",
     "plink": "https://friendlyneighbour.herokuapp.com/"
   }
 ]

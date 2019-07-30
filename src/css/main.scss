@@ -43,6 +43,11 @@ header {
 		font-family: $titleFont;
 		color: $secondaryColor;
 	}	
+	h4 {
+		a {
+			color: $primaryColor;	
+		}
+	}
 	.tags {
 		div {
 			margin: 0 5px;
@@ -60,20 +65,9 @@ header {
 }
 
 .projects {
-	padding-top: 130px;
-	.arrows {		
-		font-size: 50px;
-		color: $secondaryColor;
-		text-shadow: 5px 5px 5px $shadowColor;
-		transition: text-shadow 200ms;
-		&:hover {
-			cursor: pointer;
-		}
-		&:active {
-			text-shadow: none;
-		}
-	}
+	padding-top: 130px;	
 }
+
 
 @media screen and (min-width: 768px) {
 	.subcontainer {
@@ -85,4 +79,61 @@ header {
 	.arrows {
 		font-size: 130px !important;	
 	}
+}
+@media (hover: hover) {
+	.slider {
+		transform: rotate(180deg);
+		margin-top: 50px !important;
+	}
+}
+
+.arrows {	
+	font-size: 50px;
+	color: $secondaryColor;
+	text-shadow: 5px 5px 5px $shadowColor;
+	transition: text-shadow 200ms;	
+		&:hover {
+			cursor: pointer;
+		}
+		&:active {
+			text-shadow: none;
+		}	
+}
+
+@keyframes animate {
+	50% {
+		box-shadow: 5px 5px 5px $secondaryColor	
+	}
+}
+
+.chevron {
+	&:nth-child(1)::before {
+		animation-delay: -200ms;	
+	}
+  	&:nth-child(2)::before {
+		animation-delay: -400ms;	
+	}
+  	&:nth-child(3)::before {
+		animation-delay: -600ms;	
+	}
+  	&:nth-child(4)::before {
+		animation-delay: -800ms;	
+	}
+  	&:nth-child(5)::before {
+		animation-delay: -1000ms;	
+	}
+	&::before {
+		display: block;
+		position:relative;
+		top:50px;
+		content: "";
+		height: 100px;
+		width: 100px;	
+		margin-top: -60px;
+		transform: rotate(225deg);
+		animation: animate 2s infinite;	
+	}
+}
+.slider {
+	margin-top: 100px;
 }
