@@ -1,18 +1,24 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.c2b48137.chunk.css",
-    "main.js": "/portfolio/static/js/main.484d440c.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.484d440c.chunk.js.map",
+    "main.css": "/portfolio/static/css/main.74be51ab.chunk.css",
+    "main.js": "/portfolio/static/js/main.3f7f4d12.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.3f7f4d12.chunk.js.map",
     "runtime~main.js": "/portfolio/static/js/runtime~main.f308c8e6.js",
     "runtime~main.js.map": "/portfolio/static/js/runtime~main.f308c8e6.js.map",
     "static/css/2.22a7d4ef.chunk.css": "/portfolio/static/css/2.22a7d4ef.chunk.css",
-    "static/js/2.75616937.chunk.js": "/portfolio/static/js/2.75616937.chunk.js",
-    "static/js/2.75616937.chunk.js.map": "/portfolio/static/js/2.75616937.chunk.js.map",
+    "static/js/2.be89819b.chunk.js": "/portfolio/static/js/2.be89819b.chunk.js",
+    "static/js/2.be89819b.chunk.js.map": "/portfolio/static/js/2.be89819b.chunk.js.map",
     "index.html": "/portfolio/index.html",
-    "precache-manifest.816eaba26a1ae2bbdd4083a1f9d378a5.js": "/portfolio/precache-manifest.816eaba26a1ae2bbdd4083a1f9d378a5.js",
+    "precache-manifest.c562d1a54ef2d7b6687e640258eb4576.js": "/portfolio/precache-manifest.c562d1a54ef2d7b6687e640258eb4576.js",
     "service-worker.js": "/portfolio/service-worker.js",
     "static/css/2.22a7d4ef.chunk.css.map": "/portfolio/static/css/2.22a7d4ef.chunk.css.map",
-    "static/css/main.c2b48137.chunk.css.map": "/portfolio/static/css/main.c2b48137.chunk.css.map",
-    "static/media/main.scss": "/portfolio/static/media/AreYouOkay.bea626ec.ttf"
+    "static/css/main.74be51ab.chunk.css.map": "/portfolio/static/css/main.74be51ab.chunk.css.map",
+    "static/media/main.scss": "/portfolio/static/media/AreYouOkay.bea626ec.ttf",
+    "static/media/project1.png": "/portfolio/static/media/project1.540318c6.png",
+    "static/media/project2.png": "/portfolio/static/media/project2.d1541f02.png",
+    "static/media/project3.png": "/portfolio/static/media/project3.244fe92a.png",
+    "static/media/project4.png": "/portfolio/static/media/project4.4f587670.png",
+    "static/media/project5.png": "/portfolio/static/media/project5.d2c39e41.png",
+    "static/media/project6.png": "/portfolio/static/media/project6.17d8e423.png"
   }
 }
