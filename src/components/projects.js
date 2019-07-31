@@ -10,12 +10,13 @@ export default function Projects() {
 	const [projectIndex, setProjectIndex ] = useState(0)
 			
 	useEffect(() => {
-		setTimeout(() => {
+		const t = setTimeout(() => {
 			setMounted(true)
 		},1000)
 		setProjects(ProjectsData)
 		document.getElementById("title").innerHTML = document.getElementById("title").textContent+"'S PROJECTS"
 		return () => {
+			clearTimeout(t)
 			document.getElementById("title").innerHTML = "TIAGO CUNHA"
 		}
 	}, [])	
@@ -48,7 +49,7 @@ export default function Projects() {
 			<div className="row">
 				<div className="col-1 col-md-2"> 
 					<div className="d-flex justify-content-center">
-						<div className="arrows" onClick={() => backward()}>«</div>
+						<div className="arrows" onClick={() => backward()}>&lt;</div>
 					</div>
 				</div>
 				<div className="col-10 col-md-8">
@@ -58,7 +59,7 @@ export default function Projects() {
 				</div>
 				<div className="col-1 col-md-2"> 
 					<div className="d-flex justify-content-center">
-						<div className="arrows" onClick={() => forward()}>»</div>										
+						<div className="arrows" onClick={() => forward()}>&gt;</div>										
 					</div>
 				</div>
 			</div>

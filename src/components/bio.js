@@ -6,9 +6,12 @@ export default function Bio() {
 	const [ mounted, setMounted ] = useState(false)
 
 	useEffect(() => {
-		setTimeout(() => {
+		const t = setTimeout(() => {
 			setMounted(true)
 		},1000)
+		return () => {
+			clearTimeout(t)
+		}
 	})	
 		
 	return(
