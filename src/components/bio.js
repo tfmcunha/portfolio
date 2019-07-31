@@ -2,17 +2,30 @@ import React, { useState, useEffect } from 'react';
 import Skills from '../components/skills';
 import Education from '../components/education';
 
-export default function Bio() {
+export default function Bio(props) {
 	const [ mounted, setMounted ] = useState(false)
 
 	useEffect(() => {
 		const t = setTimeout(() => {
 			setMounted(true)
 		},1000)
+		let startDist, endDist = 0
+		function handleTouchStart(e) {		
+			startDist = e.changedTouches[0].screenY
+		}
+
+		function handleTouchEnd(e) {			
+			endDist = e.changedTouches[0].screenY
+			if (startDist > endDist) { props.setPage(2)}
+		}		
+		const slider = document.getElementById("slider")
+		slider.addEventListener("touchstart", handleTouchStart)
+		slider.addEventListener("touchend", handleTouchEnd)
 		return () => {
 			clearTimeout(t)
 		}
 	})	
+
 		
 	return(
 		<div className={`row subcontainer pb-4 ${mounted ? "fadeIn" : ""}`}>			
@@ -30,7 +43,7 @@ export default function Bio() {
 						</div>
 					</div>
 					<div className="col-12 d-flex justify-content-center">
-						<div className="slider" data-toggle="tooltip" data-placement="top" title="Scroll down!">
+						<div id="slider" data-toggle="tooltip" data-placement="top" title="Scroll down!">
 							<span className="chevron"></span>
 							<span className="chevron"></span>
 							<span className="chevron"></span>

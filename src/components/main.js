@@ -22,9 +22,9 @@ export default function Main() {
 	function changePage(page) {
 		switch(page) {
 			case 1:
-				return <Bio />;				
+				return <Bio setPage={setPage}/>;				
 			case 2:
-				return <Projects />
+				return <Projects setPage={setPage}/>
 			default: 
 				return <Bio />;
 		}
