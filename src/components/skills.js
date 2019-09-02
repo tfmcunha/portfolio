@@ -18,7 +18,7 @@ export default function Skills() {
 		        	key={index}
 		            idx={index}
 		            item={skill.name}
-		            timer={500}
+		            timer={200}
 		            lng={arr.length}
 		        />
 		    )}

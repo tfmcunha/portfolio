@@ -62,21 +62,26 @@ header {
 		list-style-type: none;
 		padding-left: 0;
 	}
-	.items {
+	.items {		
 	    position: relative;
+	    width: 60%;
+	    margin: auto;
 	    margin-top: 2px;
-	    padding: 5px;
-	    background-color: white;
-	    text-align: center;
-	    border: 1px solid grey;
-	    transition: all 1s;
+	    padding: 5px;	    	    
+	    font-weight: bold;
+	    transition: all 2s;
+	    color:white;
+		background-color: $primaryColor;
+		border-radius: 5px;
 	}
 	.hidden {
-  		top: -100vh;
+  		top: -1000px;  		
 	}
 
 	.slideDown {
- 		animation: drop 1s ease-in;
+ 		animation: drop 1s;
+
+	    
 	}
 }	
 
@@ -89,24 +94,19 @@ header {
 }
 
 @keyframes drop {
-  0% {
-    top: -100vh;
-  }
-  70% {
-    top: 20px;
-  }
-  80% {
-    top: -10px;
-  }
-  90% {
-    top: 5px;
-  }
-  95% {
-    top: -10px;
-  }
-  100% {
-    top: 0;
-  }
+	0% {
+		top: -1000px;
+		color: black;
+		background-color: rgba(white, 0);
+	}
+	80% {
+		color: black;
+		background-color: rgba(white, 0);		
+		width: 50%;
+	}
+	100% {
+		top: 0;		
+	}
 }
 
 @media screen and (min-width: 768px) {
