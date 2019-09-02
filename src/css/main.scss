@@ -58,6 +58,26 @@ header {
 			color: white;	
 		}		
 	}
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+	}
+	.items {
+	    position: relative;
+	    margin-top: 2px;
+	    padding: 5px;
+	    background-color: white;
+	    text-align: center;
+	    border: 1px solid grey;
+	    transition: all 1s;
+	}
+	.hidden {
+  		top: -100vh;
+	}
+
+	.slideDown {
+ 		animation: drop 1s ease-in;
+	}
 }	
 
 .fadeIn {
@@ -68,6 +88,26 @@ header {
 	padding-top: 130px;	
 }
 
+@keyframes drop {
+  0% {
+    top: -100vh;
+  }
+  70% {
+    top: 20px;
+  }
+  80% {
+    top: -10px;
+  }
+  90% {
+    top: 5px;
+  }
+  95% {
+    top: -10px;
+  }
+  100% {
+    top: 0;
+  }
+}
 
 @media screen and (min-width: 768px) {
 	.subcontainer {
